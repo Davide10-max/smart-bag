@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>SmartBag — Demo</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="logo">SmartBag</div>
+    </header>
+
+    <main class="main">
+      <section class="card battery">
+        <h3>Batteria</h3>
+        <div class="battery-row">
+          <div id="battery-bar" class="battery-bar">
+            <div id="battery-fill" class="battery-fill" style="width:60%"></div>
+          </div>
+          <div id="battery-percent" class="battery-percent">60%</div>
+        </div>
+      </section>
+
+      <section class="card weight">
+        <h3>Peso zaino</h3>
+        <div id="weight-ring" class="weight-ring">
+          <svg viewBox="0 0 36 36" class="circular-chart">
+            <path class="circle-bg"
+              d="M18 2.0845
+                 a 15.9155 15.9155 0 0 1 0 31.831
+                 a 15.9155 15.9155 0 0 1 0 -31.831" />
+            <path id="weight-circle" class="circle"
+              stroke-dasharray="40,100"
+              d="M18 2.0845
+                 a 15.9155 15.9155 0 0 1 0 31.831
+                 a 15.9155 15.9155 0 0 1 0 -31.831" />
+            <text id="weight-text" x="18" y="20.35" class="chart-text">4.0 kg</text>
+          </svg>
+        </div>
+      </section>
+
+      <section class="card items">
+        <h3>Oggetti</h3>
+        <ul id="items-list" class="items-list">
+        </ul>
+        <div class="controls">
+          <button id="scan-btn" class="btn">Scansiona ora</button>
+          <button id="simulate-toggle" class="btn outline">Simula</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <small>Versione demo • App neutra</small>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
